@@ -13,4 +13,10 @@ sudo apt-get install pack-cli
 chmod a+w /var/run/docker.sock
 
 ### generate container 
-pack build my-angular-app --builder gcr.io/buildpacks/builder:v1
+pack build simple-angular-app-image --builder gcr.io/buildpacks/builder:v1
+
+### run container
+docker images
+
+docker run -p 8081:8080 simple-angular-app-image
+
